@@ -71,10 +71,9 @@ static inline uint32_t getMainStackBase(void)
 
 static inline uint32_t getTaskStackBase(uint32_t sp)
 {
-	/* return the start of the stack of the last running task */
-
-	/* needs to be implemented */
-	#error "not implemented"
+	/* return the start of the stack of the last running task
+	 * can either use implementation for your own OS or even use a constant size like: sp + 1024*/
+	return sp +1024;
 }
 
 static inline uint32_t getStackBase(uint32_t sp)
